@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(run)",
+      "Skill(run:*)",
+      "PowerShell(Get-Command chromium, chromium-browser, chrome, \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" -ErrorAction SilentlyContinue)",
+      "PowerShell($screenshotPath = \"C:\\\\Users\\\\SAURAB~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-SaurabhSuman1-codebase-AI-projects-bench-dashboard\\\\d888d7d3-c578-449b-9744-cc6b9f1e63b6\\\\scratchpad\\\\screenshot.png\"; & \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" --headless=new --screenshot=\"$screenshotPath\" --window-size=1280,900 --no-sandbox \"http://localhost:5174/\" 2>&1; Start-Sleep -Seconds 4; Test-Path $screenshotPath)",
+      "PowerShell($screenshotPath = \"C:\\\\Users\\\\SAURAB~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-SaurabhSuman1-codebase-AI-projects-bench-dashboard\\\\d888d7d3-c578-449b-9744-cc6b9f1e63b6\\\\scratchpad\\\\screenshot.png\"; & \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" --headless --screenshot=\"$screenshotPath\" --window-size=1280,900 \"http://localhost:5174/\" 2>&1; Start-Sleep -Seconds 5; Test-Path $screenshotPath)",
+      "PowerShell($response = Invoke-WebRequest -Uri \"http://localhost:5174/\" -UseBasicParsing; $response.Content | Select-String \"error|Error|failed\" | Select-Object -First 10)",
+      "PowerShell($response = Invoke-WebRequest -Uri \"http://localhost:5174/@vite/client\" -UseBasicParsing; Write-Output \"Status: $\\($response.StatusCode\\)\")",
+      "PowerShell($response = Invoke-WebRequest -Uri \"http://localhost:5174/src/main.jsx\" -UseBasicParsing; Write-Output \"Status: $\\($response.StatusCode\\)\"; $response.Content | Select-Object -First 30)",
+      "PowerShell($response = Invoke-WebRequest -Uri \"http://localhost:5174/src/App.jsx\" -UseBasicParsing; $response.StatusCode; $response.Content | Select-Object -First 5)",
+      "PowerShell($response = Invoke-WebRequest -Uri \"http://localhost:5174/src/index.css\" -UseBasicParsing; $response.Content | Select-Object -First 20)",
+      "PowerShell(Start-Process \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" -ArgumentList \"http://localhost:5174/\")",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:5174/src/App.jsx\" -UseBasicParsing; Write-Output \"Status: $\\($r.StatusCode\\)\"; $r.Content | Select-String \"error|SyntaxError|Failed\" | Select-Object -First 5)",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\SaurabhSuman1\\\\codebase\\\\AI projects\\\\bench-dashboard\\\\.github\\\\workflows\")"
+    ]
+  }
+}
