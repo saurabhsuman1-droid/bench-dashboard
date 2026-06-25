@@ -13,7 +13,8 @@
       "PowerShell($response = Invoke-WebRequest -Uri \"http://localhost:5174/src/index.css\" -UseBasicParsing; $response.Content | Select-Object -First 20)",
       "PowerShell(Start-Process \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" -ArgumentList \"http://localhost:5174/\")",
       "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:5174/src/App.jsx\" -UseBasicParsing; Write-Output \"Status: $\\($r.StatusCode\\)\"; $r.Content | Select-String \"error|SyntaxError|Failed\" | Select-Object -First 5)",
-      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\SaurabhSuman1\\\\codebase\\\\AI projects\\\\bench-dashboard\\\\.github\\\\workflows\")"
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\SaurabhSuman1\\\\codebase\\\\AI projects\\\\bench-dashboard\\\\.github\\\\workflows\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\SaurabhSuman1\\\\codebase\\\\AI projects\\\\bench-dashboard\\\\docs\")"
     ]
   }
 }
